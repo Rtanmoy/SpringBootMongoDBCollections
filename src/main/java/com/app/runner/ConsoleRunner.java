@@ -27,5 +27,16 @@ private EmployeeRepository repo;
 	for(Employee ee:emps) {
 		System.out.println(ee.getId());
 	}
+	System.out.println("------------**************----------------");
+	//Some Exception cases
+	//#1 save()
+	repo.save(new Employee(11,"TR",2.2));
+	repo.save(new Employee("12AS",10,"RT",22.2));
+	repo.save(new Employee("12AS",10,"RoT",22.2));//update(rt-rot
+	
+	//#2 insert()
+	repo.insert(new Employee(12,"RT",22.2));
+	repo.insert(new Employee("13AS",10,"RT",22.2));
+	repo.insert(new Employee("13AS",10,"ROT",22.2));//trows exception
 	}
 }

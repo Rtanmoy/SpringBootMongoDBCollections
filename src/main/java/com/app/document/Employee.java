@@ -18,6 +18,14 @@ public class Employee {
 		this.empName = empName;
 		this.empSal = empSal;
 	}
+	
+	public Employee(String id, Integer empId, String empName, Double empSal) {
+		super();
+		this.id = id;
+		this.empId = empId;
+		this.empName = empName;
+		this.empSal = empSal;
+	}
 	public String getId() {
 		return id;
 	}
